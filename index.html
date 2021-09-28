@@ -9,9 +9,45 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mutaz's W9 Homework</title>
+        <style>
+            #vis_title,
+            #my_map,
+            #viz_caption {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .parent {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+            }
+
+            .div1 {
+                grid-area: 1 / 1 / 6 / 2;
+            }
+            .div2 {
+                grid-area: 1 / 2 / 6 / 5;
+            }
+            .div3 {
+                grid-area: 1 / 5 / 6 / 6;
+            }
+        </style>
     </head>
     <body>
-        <div id="my_map"></div>
+        <h2 id="vis_title">Ranking of state for housing</h2>
+        <div class="parent">
+            <div class="div1"></div>
+            <div class="div2" id="my_map"></div>
+            <div class="div3"></div>
+        </div>
+        <p id="viz_caption">
+            The darker (greater value) the better the housing | Missing data for
+            Northern Territory and Tasmania
+        </p>
         <script type="text/javascript" src="js/visualization.js"></script>
     </body>
 </html>
