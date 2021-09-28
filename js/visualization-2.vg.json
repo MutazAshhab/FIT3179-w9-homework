@@ -21,14 +21,14 @@
                 "fields": ["Rank", "Housing"]
             }
         },
-        { "calculate": "1 / (datum.Rank * 1)", "as": "City Rank" }
+        { "calculate": "datum.Housing", "as": "Housing Rank" }
     ],
     "mark": {
         "type": "geoshape"
     },
     "encoding": {
         "color": {
-            "field": "City Rank",
+            "field": "Housing Rank",
             "type": "quantitative"
         },
         "tooltip": [
@@ -38,9 +38,9 @@
                 "title": "State"
             },
             {
-                "field": "City Rank",
+                "field": "Housing Rank",
                 "type": "quantitative",
-                "title": "City Rank"
+                "title": "Housing Rank"
             }
         ]
     }
